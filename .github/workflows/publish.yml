@@ -52,8 +52,8 @@ jobs:
         run: node scripts/publish-site.mjs
         env:
           SITES_PUBLISH_KEY: ${{ secrets.SITES_PUBLISH_KEY }}
-          GITHUB_SHA: ${{ steps.source.outputs.sha }}
-          GITHUB_REPOSITORY: bryanrg22/openai-student-collective-usc
+          SITE_SOURCE_SHA: ${{ steps.source.outputs.sha }}
+          SITE_SOURCE_REPOSITORY: bryanrg22/openai-student-collective-usc
       - name: Record verified release and keep the schedule active
         env:
           GH_TOKEN: ${{ github.token }}
